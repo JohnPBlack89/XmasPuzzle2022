@@ -1,0 +1,22 @@
+{
+  "name": "weddingwebsite",
+  "version": "1.0.0",
+  "description": "Morgan and Johnny's wedding website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnPBlack89/WeddingWebsite.git"
+  },
+  "author": "Johnny B",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnPBlack89/WeddingWebsite/issues"
+  },
+  "homepage": "https://github.com/JohnPBlack89/WeddingWebsite#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

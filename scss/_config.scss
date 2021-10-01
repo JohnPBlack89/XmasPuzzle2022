@@ -1,6 +1,4 @@
-// Due to the underscore at the beginning of this filename
-// this file will be considered a partial and will not be compiled
-$primary-color: rgb(255, 253, 153);
+$primary-color: rgb(255, 248, 149);
 $dark-color: rgb(56, 56, 56);
 $light-color: whitesmoke;
 $danger-color: orange;
@@ -9,42 +7,15 @@ $max-width: 1100px;
 
 // Set text color based on background
 @function set-text-color($color) {
-  // Using built-in lightess color:
-  @if (lightness($color) > 50) {
-    @return $dark-color;
+  @if (lightness($color) > 60) {
+    @return #333;
   } @else {
-    @return $light-color;
+    @return #fff;
   }
 }
 
-// Create a mix-in, a faux function that doesn't return anything
-// Set background & text-color
+// Set background & text color
 @mixin set-background($color) {
   background-color: $color;
-  // Using above text color function
   color: set-text-color($color);
-}
-
-// Margin & Padding
-$spaceamounts: (1, 2, 3, 4, 5);
-@each $space in $spaceamounts {
-  // All Around Margin
-  .m-#{$space} {
-    margin: #{$space}rem;
-  }
-
-  //Vertical Margin
-  .my-#{$space} {
-    margin: #{$space}rem 0;
-  }
-
-  // All Around Padding
-  .p-#{$space} {
-    padding: #{$space}rem;
-  }
-
-  //Vertical Padding
-  .py-#{$space} {
-    padding: #{$space}rem 0;
-  }
 }

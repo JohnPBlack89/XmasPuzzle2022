@@ -1,7 +1,7 @@
 // Due to the underscore at the beginning of this filename
 // this file will be considered a partial and will not be compiled
-$primary-color: rgb(45, 0, 0);
-$dark-color: rgb(90, 0, 0);
+$primary-color: rgb(255, 253, 153);
+$dark-color: rgb(56, 56, 56);
 $light-color: whitesmoke;
 $danger-color: orange;
 $success-color: lightgreen;
@@ -9,6 +9,7 @@ $max-width: 1100px;
 
 // Set text color based on background
 @function set-text-color($color) {
+  // Using built-in lightess color:
   @if (lightness($color) > 50) {
     @return $dark-color;
   } @else {
@@ -17,9 +18,10 @@ $max-width: 1100px;
 }
 
 // Create a mix-in, a faux function that doesn't return anything
-// to set background & text-color
+// Set background & text-color
 @mixin set-background($color) {
   background-color: $color;
+  // Using above text color function
   color: set-text-color($color);
 }
 

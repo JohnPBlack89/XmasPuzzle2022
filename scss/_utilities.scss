@@ -42,6 +42,7 @@
 
 // Backgrounds
 .bg {
+  // The Ampersand is a place holder and will be replaced by bg
   &-primary {
     @include set-background($primary-color);
   }
@@ -50,7 +51,7 @@
   }
   &-light {
     @include set-background($light-color);
-    border: #bbb 1px solid;
+    border: $primary-color;
   }
   &-success {
     @include set-background($success-color);
@@ -60,7 +61,7 @@
   }
   &-white {
     @include set-background(white);
-    border: #bbb 1px solid;
+    border: $primary-color;
   }
 }
 
@@ -70,7 +71,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(90, 0, 0, 0.5);
+  background-color: $dark-color;
 }
 
 // Buttons

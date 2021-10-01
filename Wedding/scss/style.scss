@@ -1,0 +1,18 @@
+@import "config";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+$font-family: "Montserrat", sans-serif;
+
+// Basic Styling
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem; // rem is default font size
+  line-height: 1.6;
+  background-color: $light-color;
+  color: $dark-color;
+}

@@ -1,7 +1,11 @@
-@import 'config';
-@import 'utilities';
-@import 'form';
+@import "config";
+@import "utilities";
+@import "mobile";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
+$font-family: "Montserrat", sans-serif;
+
+// Basic Styling
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,10 +13,10 @@
 }
 
 body {
-  font-family: 'Staatliches', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem; // rem is default font size
   line-height: 1.6;
-  background-color: $light-color;
+  /*background-color: $light-color; */
   color: $dark-color;
 }
 
@@ -33,22 +37,21 @@ img {
 .navbar {
   display: flex;
   // Use grid for the main layout and flex for aligning text
-  align-items: center;
+  //align-items: center;
   justify-content: space-between;
-  padding: 0.7rem 2rem;
+  //padding: 0.7rem 2rem;
   position: fixed;
   z-index: 1;
   width: 100%;
   top: 0;
   border-bottom: solid 1px $primary-color;
   opacity: 0.9;
-  // You can nest within Sass:
   ul {
     display: flex;
   }
 
   a {
-    color: #fff;
+    color: $light-color;
     padding: 0.45rem;
     margin: 0 0.25rem;
 
@@ -61,9 +64,9 @@ img {
 // Landing
 .landing {
   position: relative;
-  background: url('../img/bank.jpg') no-repeat center center/cover;
+  background: url("../dist/img/grandcanyon.jpg") no-repeat center center/cover;
   height: 100vh; //vh-viewport heights
-
+  /*
   &-inner {
     color: #fff;
     height: 100%;
@@ -74,97 +77,19 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
+  } */
 }
 
-// Safehouses Page
-.safehouse {
-  display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
-  grid-gap: 2rem;
-  align-items: center;
-  padding: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
-//Safehouse Page
-.safehouse-grid {
-  display: grid;
-  grid-template-areas:
-    'top top' 'details details' 'accomplices messages'
-    'join join';
-  grid-gap: 1rem;
-
-  .safehouse-top {
-    grid-area: top;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    img {
-      width: 300px;
-    }
-
-    .icons a {
-      color: $light-color;
-      margin: 0 0.3rem;
-      &:hover {
-        color: $dark-color;
-      }
-    }
-  }
-  .safehouse-details {
-    grid-area: details;
-    text-align: center;
-
-    .sets {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-  }
-  .safehouse-accomplices {
-    grid-area: accomplices;
-    grid-template-areas:
-      'top top' 'details details' 'accomplices messages'
-      'join join';
-    grid-gap: 1rem;
-    .accomplice {
-      display: grid;
-      .accomplice-results {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-    }
-  }
-
-  .safehouse-messages {
-    grid-area: messages;
-  }
-  .safehouse-accomplices,
-  .safehouse-messages {
-    & > div {
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: #ccc 1px dotted;
-      &:last-child {
-        border: none;
-      }
-    }
-
-    p {
-      margin: 0.5rem 0;
-    }
-  }
-  .safehouse-join {
-    grid-area: join;
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
   }
 }
-
-@import 'mobile';

@@ -16,7 +16,7 @@
     <nav class="navbar bg-dark">
         <h1>
             <a href="index.html">
-                <i class="fas fa-heart"></i> Morgan and Johnny <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i> Morgan and Johnny's Big Day <i class="fas fa-heart"></i>
             </a>
         </h1>
         <ul>
@@ -25,7 +25,9 @@
             <li><a href="">RSVP</a></li>
         </ul>
     </nav>
-    <section class="landing">
+    <section class="landing video-container">
+        <iframe id="video" src="https://www.youtube.com/embed/RgKAFK5djSk?rel=0&autoplay=1&mute=1" frameborder="0"
+            allowfullscreen></iframe>
         <div class="dark-overlay">
             <div class="landing-inner">
                 <h1 class="x-large"> Morgan and Johnny</h1>
@@ -45,7 +47,17 @@
             </div>
         </div>
     </section>
-
 </body>
 
 </html>
+
+<script>
+    $(function () {
+        $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+
+        // If you want to keep full screen on window resize
+        $(window).resize(function () {
+            $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+        });
+    });
+</script>

@@ -4,8 +4,8 @@
   }
 
   .navbar {
-    display: block;
-    text-align: center;
+    display: none;
+    text-align: none;
 
     ul {
       text-align: center;
@@ -15,5 +15,13 @@
     h1 {
       margin-bottom: 1rem;
     }
+  }
+
+  .video-container {
+    padding: 0%;
+  }
+
+  .fullpage {
+    background-color: $dark-color;
   }
 }
